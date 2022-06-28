@@ -1,0 +1,112 @@
+:global(*) {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:global(body) {
+  padding: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+:global(button) {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.feedback {
+  width: 20vw;
+  padding: 20px;
+  margin: 0 auto;
+
+  background-color: rgb(238, 232, 232);
+  overflow: hidden;
+  border-top-right-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.feedbackText {
+  margin-bottom: 15px;
+
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btnList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+
+  list-style: none;
+}
+
+.btnItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #524f4e;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.good:hover {
+  background: #2ee59d;
+  box-shadow: 0 4px 20px rgba(46, 229, 157, 0.4);
+}
+
+.neutral:hover {
+  background: rgb(46, 171, 229);
+  box-shadow: 0 4px 20px rgba(46, 171, 229, 0.4);
+}
+
+.bad:hover {
+  background: rgb(229, 46, 77);
+  box-shadow: 0 4px 20px rgba(229, 46, 77, 0.4);
+}
+
+.statsList {
+  list-style: none;
+}
+
+.statsItem {
+  display: flex;
+}
+
+.statsItem:not(:last-child) {
+  margin-bottom: 5px;
+
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.statsText {
+  width: 50%;
+}
