@@ -1,43 +1,3 @@
-:global(*) {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-:global(body) {
-  padding: 20px;
-
-  font-family: 'Montserrat', sans-serif;
-}
-
-:global(button) {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.feedback {
-  width: 350px;
-  padding: 20px;
-  margin: 0 auto;
-
-  background-color: rgb(238, 232, 232);
-  overflow: hidden;
-  border-top-right-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.feedbackTitle {
-  margin-bottom: 15px;
-
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
-}
-
 .btnList {
   display: flex;
   justify-content: center;
@@ -91,22 +51,4 @@
 .bad:hover {
   background: rgb(229, 46, 77);
   box-shadow: 0 4px 20px rgba(229, 46, 77, 0.4);
-}
-
-.statsList {
-  list-style: none;
-}
-
-.statsItem {
-  display: flex;
-}
-
-.statsItem:not(:last-child) {
-  margin-bottom: 5px;
-
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-}
-
-.statsText {
-  width: 50%;
 }

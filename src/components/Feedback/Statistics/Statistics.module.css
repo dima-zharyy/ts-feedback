@@ -1,0 +1,17 @@
+.statsList {
+  list-style: none;
+}
+
+.statsItem {
+  display: flex;
+}
+
+.statsItem:not(:last-child) {
+  margin-bottom: 5px;
+
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.statsText {
+  width: 50%;
+}
