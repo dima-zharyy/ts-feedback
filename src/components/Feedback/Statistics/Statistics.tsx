@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
-import { IStats } from '../../../../types/appTypes';
+import { IStats } from '../../../types/appTypes';
 
 export const Statistics: React.FC<IStats> = ({
   totalFeedback,

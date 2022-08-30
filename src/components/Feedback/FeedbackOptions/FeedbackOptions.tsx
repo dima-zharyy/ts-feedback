@@ -1,5 +1,5 @@
 import css from './FeedbackOptions.module.css';
-import { IFeedbackProps } from '../../../../types/appTypes';
+import { IFeedbackProps } from '../../../types/appTypes';
 
 export const FeedbackOptions: React.FC<IFeedbackProps> = ({
   options,
