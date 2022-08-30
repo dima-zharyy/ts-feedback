@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
-import Feedback from './Feedback/Feedback';
-import Section from './Feedback/Section/Section';
-import FeedbackOptions from './Feedback/FeedbackOptions/FeedbackOptions';
-import Statistics from './Feedback/Statistics/Statistics';
-import Notification from './Feedback/Notification/Notification';
+import { Component } from 'react';
+import { Feedback } from './Feedback/Feedback';
+import { Section } from './Feedback/Section/Section';
+import { FeedbackOptions } from './Feedback/FeedbackOptions/FeedbackOptions';
+import { Statistics } from './Feedback/Statistics/Statistics';
+import { Notification } from './Feedback/Notification/Notification';
+import { IAppState } from '../../types/appTypes';
 
-class App extends Component {
+class App extends Component<{}, IAppState> {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
 
-  handleLeaveFeedback = option => {
-    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
+  handleLeaveFeedback = (option: string): void => {
+    this.setState(prevState => ({
+      ...prevState,
+      [option]: prevState[option] + 1,
+    }));
   };
 
   countTotalFeedback() {
@@ -27,8 +31,9 @@ class App extends Component {
   }
 
   render() {
-    const totalFeedback = this.countTotalFeedback();
-    const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
+    const totalFeedback: number = this.countTotalFeedback();
+    const positiveFeedbackPercentage: number =
+      this.countPositiveFeedbackPercentage();
     const options = Object.keys(this.state);
 
     return (

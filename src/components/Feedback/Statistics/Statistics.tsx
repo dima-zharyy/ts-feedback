@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
+import { IStats } from '../../../../types/appTypes';
 
-export default function Statistics({
+export const Statistics: React.FC<IStats> = ({
   totalFeedback,
   positiveFeedbackPercentage,
   good,
   neutral,
   bad,
-}) {
+}) => {
   return (
     <ul className={css.statsList}>
       <li className={css.statsItem}>
@@ -33,7 +34,7 @@ export default function Statistics({
       </li>
     </ul>
   );
-}
+};
 
 Statistics.propTypes = {
   totalFeedback: PropTypes.number.isRequired,

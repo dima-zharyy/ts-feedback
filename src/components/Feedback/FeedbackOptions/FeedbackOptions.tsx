@@ -1,8 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
+import { IFeedbackProps } from '../../../../types/appTypes';
 
-export default function FeedbackOptions({ options, onLeaveFeedback }) {
+export const FeedbackOptions: React.FC<IFeedbackProps> = ({
+  options,
+  onLeaveFeedback,
+}) => {
   return (
     <ul className={css.btnList}>
       {options.map(option => (
@@ -18,9 +20,4 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
       ))}
     </ul>
   );
-}
-
-FeedbackOptions.propTypes = {
-  onLeaveFeedback: PropTypes.elementType.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string),
 };
